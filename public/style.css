@@ -68,11 +68,36 @@ body {
     display: grid;
 }
 
-.search-input {
-    width: 250px;
-    height: 30px;
-}
-
+/* From: https://codepen.io/stoic25/pen/gKLXWZ */
+.fg--search {
+    background: white;
+    position: relative;
+    width: 300px;
+  }
+  
+.fg--search input {
+    width: 100%;
+    padding: 20px 60px 20px 20px;
+    display: block;
+    font-size: 20px;
+  }
+  
+.fg--search button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 20px;
+    z-index: 2;
+  }
+  
+.fg--search input:focus + button .fa-search {
+    color: red;
+  }
 
 h1 {
     font-family: "Carter One", system-ui;
@@ -80,6 +105,28 @@ h1 {
     color: var(--primary);
 }
 
-h2, h3, h4 {
+h2 {
     font-size: 24px;
+}
+
+h3, h4 {
+    font-size: 40px;
+    color: var(--primary);
+}
+
+.question {
+    font-size: 26px;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.answer {
+    display: none;
+    font-size: 24px;
+}
+
+.question:hover + .answer {
+    display: block;
+    font-style: italic;
+    color: red;
 }
