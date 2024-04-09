@@ -12,7 +12,7 @@ app.post('/upload', upload.single('photo'), (req, res) => {
   const fileName = req.file.filename;
 
   // do something with the uploaded image (ie. process it)
-  res.send('File uploaded successfully.');
+  res.send('Image uploaded successfully.');
 });
 
 app.listen(3001, () => {
