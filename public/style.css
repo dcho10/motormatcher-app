@@ -26,12 +26,16 @@ header {
     color: var(--tertiary);
 }
 
+.header-btns {
+    display: flex;
+}
+
 a {
     color: var(--secondary)
 }
 
-.header-btns {
-    display: flex;
+a:hover {
+    color: var(--tertiary);
 }
 
 .links {
@@ -56,6 +60,14 @@ ul {
     color: var(--tertiary);
 }
 
+.login-link {
+    color: black;
+}
+
+.login-link:hover {
+    color: var(--secondary);
+}
+
 body {
     background-color: var(--tertiary);
 }
@@ -73,14 +85,14 @@ body {
     background: white;
     position: relative;
     width: 300px;
-  }
+}
   
 .fg--search input {
     width: 100%;
     padding: 20px 60px 20px 20px;
     display: block;
     font-size: 20px;
-  }
+}
   
 .fg--search button {
     background: transparent;
@@ -93,15 +105,19 @@ body {
     right: 0;
     padding: 20px 20px;
     z-index: 2;
-  }
+}
   
 .fg--search input:focus + button .fa-search {
     color: red;
-  }
+}
+
+.listings, .faq {
+    padding: 2px 0 2px 0;
+}
 
 h1 {
     font-family: "Carter One", system-ui;
-    font-size: 72px;
+    font-size: 68px;
     color: var(--primary);
 }
 
@@ -112,21 +128,89 @@ h2 {
 h3, h4 {
     font-size: 40px;
     color: var(--primary);
+    padding: 10px 0 10px 0;
 }
 
 .question {
-    font-size: 26px;
+    font-size: 18px;
     font-family: "Roboto", sans-serif;
-
+    padding: 1px 0 1px 0;
 }
 
 .answer {
     display: none;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .question:hover + .answer {
     display: block;
     font-style: italic;
     color: red;
+}
+
+/* Login CSS */
+.login {
+    display: grid;
+    justify-content: center;
+}
+
+.login-container {
+    border-style: solid;
+    border-width: 25px;
+    padding: 30px;
+    border-color: var(--primary);
+    border-radius: 20px;
+    margin: 50px;
+}
+
+h5 {
+    font-size: 56px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+h6 {
+    font-size: 32px;
+    color: black;
+}
+
+.account-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset, .signup {
+    color: black;
+}
+
+.reset:hover, .signup:hover {
+    color: var(--secondary);
+}
+
+.forgot-password {
+    display: grid;
+}
+
+.username, .password, .forgot-password {
+    padding: 20px;
+}
+
+.username-text, .password-text {
+    height: 40px;
+    width: 300px;
+}
+
+.login-button {
+    height: 50px;
+    background-color: var(--primary);
+    color: var(--tertiary);
+    font-size: 26px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    cursor: pointer;
 }
