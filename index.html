@@ -22,7 +22,7 @@
                 </ul>
             </section>
     
-            <button class="login-btn" id="login"> Login </button>
+            <button class="login-btn" id="login" onclick="window.location.href='login.html'">Login</button>
         </section>
     </header>
 
@@ -32,10 +32,18 @@
             <h2> What are you looking for? </h2>
             <!-- From: https://codepen.io/stoic25/pen/gKLXWZ -->
             <section class="form-group fg--search">
-                <input type="text" class="input" placeholder="search">
+                <input type="text" class="input" placeholder="Search">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </section>
         </form>
+
+        <section class="display-postings">
+            <h3> Your postings </h3>
+            <p><a href="login.html" class="login-link">Login</a> to view.</p>
+            <section class="">
+
+            </section>
+        </section>
 
         <section class="listings">
             <h3> Previously viewed listings </h3>
@@ -44,7 +52,7 @@
         </section>
 
         <section class="faq">
-            <h4> Frequently Asked Questions (FAQ) </h4>
+            <h3> Frequently Asked Questions (FAQ) </h3>
                 <li class="question"> 1. Is there a posting fee? </li>
                 <li class="answer"> There is no posting fee! You can post on our site completely free! </li>
                 <li class="question"> 2. How do I post a successful ad? </li>
