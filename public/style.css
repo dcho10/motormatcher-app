@@ -78,6 +78,7 @@ body {
     align-items: center;
     text-align: center;
     display: grid;
+    padding-bottom: 40px;
 }
 
 /* From: https://codepen.io/stoic25/pen/gKLXWZ */
