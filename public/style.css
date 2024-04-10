@@ -133,6 +133,10 @@ h3 {
     padding: 10px 0 10px 0;
 }
 
+p {
+    font-size: 24px;
+}
+
 .question {
     font-size: 18px;
     font-family: "Roboto", sans-serif;
@@ -191,11 +195,11 @@ h5 {
     color: var(--secondary);
 }
 
-.forgot-password {
+.account-management {
     display: grid;
 }
 
-.username, .password, .forgot-password {
+.username, .password, .account-management {
     padding: 20px;
 }
 
