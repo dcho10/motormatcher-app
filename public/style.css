@@ -26,12 +26,16 @@ header {
     color: var(--tertiary);
 }
 
+.header-btns {
+    display: flex;
+}
+
 a {
     color: var(--secondary)
 }
 
-.header-btns {
-    display: flex;
+a:hover {
+    color: var(--tertiary);
 }
 
 .links {
@@ -56,6 +60,30 @@ ul {
     color: var(--tertiary);
 }
 
+.login-link {
+    color: black;
+}
+
+.login-link:hover {
+    color: var(--secondary);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.listing-btn {
+    height: 50px;
+    width: 200px;
+    font-size: 24px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 20px;
+    color: var(--tertiary);
+    margin: 0 10px 0 10px;
+}
+
 body {
     background-color: var(--tertiary);
 }
@@ -66,20 +94,199 @@ body {
     align-items: center;
     text-align: center;
     display: grid;
+    padding-bottom: 40px;
 }
 
-.search-input {
-    width: 250px;
-    height: 30px;
+/* From: https://codepen.io/stoic25/pen/gKLXWZ */
+.fg--search {
+    background: white;
+    position: relative;
+    width: 300px;
+}
+  
+.fg--search input {
+    width: 100%;
+    padding: 20px 60px 20px 20px;
+    display: block;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+  
+.fg--search button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 20px;
+    z-index: 2;
+}
+  
+.fg--search input:focus + button .fa-search {
+    color: red;
 }
 
+.listings, .faq {
+    padding: 2px 0 2px 0;
+}
 
 h1 {
     font-family: "Carter One", system-ui;
-    font-size: 72px;
+    font-size: 68px;
     color: var(--primary);
 }
 
-h2, h3, h4 {
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 40px;
+    color: var(--primary);
+    padding: 10px 0 10px 0;
+}
+
+p {
+    font-size: 24px;
+}
+
+.question {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    padding: 1px 0 1px 0;
+}
+
+.answer {
+    display: none;
+    font-size: 16px;
+}
+
+.question:hover + .answer {
+    display: block;
+    font-style: italic;
+    color: red;
+}
+
+/* Login CSS */
+.login {
+    display: grid;
+    justify-content: center;
+}
+
+.login-container {
+    border-style: solid;
+    border-width: 25px;
+    padding: 30px;
+    border-color: var(--primary);
+    border-radius: 20px;
+    margin: 50px;
+}
+
+h4, h6 {
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+h5, h7 {
+    font-size: 32px;
+    color: var(--primary);
+    padding-bottom: 10px;
+}
+
+.account-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset, .signup {
+    color: black;
+}
+
+.reset:hover, .signup:hover {
+    color: var(--secondary);
+}
+
+.account-management {
+    display: grid;
+}
+
+.username, .password, .account-management, .email {
+    padding: 20px;
+}
+
+.username-text, .password-text, .email-text {
+    height: 40px;
+    width: 300px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.login-button {
+    height: 50px;
+    background-color: var(--primary);
+    color: black;
+    font-size: 26px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.login-button:hover, .listing-btn:hover, .upload-photo-btn:hover, .post-listing-btn:hover {
+    cursor: pointer;
+    color: var(--tertiary);
+}
+
+/* Selling CSS */
+
+.selling {
+    display: flex;
+    padding: 15px;
+}
+
+.listing-container {
+    border-style: dashed;
+    border-color: var(--secondary);
+}
+.model, .year, .mileage, .description {
+    display: grid;
+    padding: 10px;
+}
+
+.model-name, .model-year, .mileage-text {
+    height: 30px;
+    width: 250px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.description-text {
+    height: 200px;
+    width: 500px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.listing-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload-photo-btn, .post-listing-btn {
+    margin: 10px;
+    height: 50px;
+    width: 150px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 20px;
+    color: black;
     font-size: 24px;
 }

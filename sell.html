@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Trading App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Bungee+Shade&family=Carter+One&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="home"> TBD </a>
+        <section class="header-btns">
+            <section >
+                <ul>
+                  <li class="links"><a href="buy.html"> Buy </a></li>
+                  <li class="links"><a href="sell"> Sell </a></li>
+                  <li class="links"><a href="trade"> Trade </a></li>
+                </ul>
+            </section>
+    
+            <button class="login-btn" id="login" onclick="window.location.href='login.html'">Login</button>
+        </section>
+    </header>
+
+    <main>
+        <section class="selling">
+                <container class="listing-container">
+                    <h6> Create A Listing </h6>
+                    <section class="model">
+                        <h7> Name of Model (required) </h7>
+                        <input type="text" class="model-name" placeholder="Name">
+                    </section>
+                    
+                    <section class="year">
+                        <h7> Model Year (Required) </h7>
+                        <input type="text" class="model-year" placeholder="Year">
+                    </section>
+
+                    <section class="mileage">
+                        <h7> Mileage (required) </h7>
+                        <input type="text" class="mileage-text" placeholder="Mileage">
+                    </section>
+
+                    <section class="description">
+                        <h7> Description </h7>
+                        <textarea type="text" class="description-text" placeholder="Provide a detailed description"></textarea>
+                    </section>
+
+                    <section class="listing-btns">
+                        <button type="button" class="upload-photo-btn"> Upload Photo </button>
+                        <button type="button" class="post-listing-btn"> Post Listing </button>
+                    </section>
+                </container>
+        </section>
+    </main>
+</body>
+</html>
