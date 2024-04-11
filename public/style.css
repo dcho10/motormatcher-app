@@ -68,6 +68,22 @@ ul {
     color: var(--secondary);
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.listing-btn {
+    height: 50px;
+    width: 200px;
+    font-size: 24px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 20px;
+    color: var(--tertiary);
+    margin: 0 10px 0 10px;
+}
+
 body {
     background-color: var(--tertiary);
 }
@@ -170,14 +186,14 @@ p {
     margin: 50px;
 }
 
-h4 {
+h4, h6 {
     font-size: 64px;
     display: flex;
     justify-content: center;
     
 }
 
-h5 {
+h5, h7 {
     font-size: 32px;
     color: var(--primary);
     padding-bottom: 10px;
@@ -200,11 +216,11 @@ h5 {
     display: grid;
 }
 
-.username, .password, .account-management {
+.username, .password, .account-management, .email {
     padding: 20px;
 }
 
-.username-text, .password-text {
+.username-text, .password-text, .email-text {
     height: 40px;
     width: 300px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -215,13 +231,62 @@ h5 {
 .login-button {
     height: 50px;
     background-color: var(--primary);
-    color: var(--tertiary);
+    color: black;
     font-size: 26px;
     border: none;
     border-radius: 20px;
     margin-top: 20px;
 }
 
-.login-button:hover {
+.login-button:hover, .listing-btn:hover, .upload-photo-btn:hover, .post-listing-btn:hover {
     cursor: pointer;
+    color: var(--tertiary);
+}
+
+/* Selling CSS */
+
+.selling {
+    display: flex;
+    padding: 15px;
+}
+
+.listing-container {
+    border-style: dashed;
+    border-color: var(--secondary);
+}
+.model, .year, .mileage, .description {
+    display: grid;
+    padding: 10px;
+}
+
+.model-name, .model-year, .mileage-text {
+    height: 30px;
+    width: 250px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.description-text {
+    height: 200px;
+    width: 500px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.listing-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload-photo-btn, .post-listing-btn {
+    margin: 10px;
+    height: 50px;
+    width: 150px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 20px;
+    color: black;
+    font-size: 24px;
 }
