@@ -1,3 +1,5 @@
+// photo upload 
+
 const express = require('express');
 const multer = require('multer');
 const app = express();
@@ -17,4 +19,34 @@ app.post('/upload', upload.single('photo'), (req, res) => {
 
 app.listen(3001, () => {
   console.log('Server is running on port 3001');
+});
+
+// Email to ID association - for buyers to email sellers
+
+const { Sequelize, DataTypes } = require('sequelize');
+
+const sequelize = new Sequelize('database', 'username', 'password', {
+    host: 'localhost',
+    dialect: 'mysql'
+});
+
+const Inquiry = sequelize.define('Inquiry', {
+    itemId: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    message: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
+});
+const Item = sequelize.define('Item', {
+  sellerId: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+  },
+  sellerEmail: {
+      type: DataTypes.STRING,
+      allowNull: false
+  }
 });
