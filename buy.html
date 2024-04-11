@@ -17,7 +17,7 @@
             <section >
                 <ul>
                   <li class="links"><a href="buy.html"> Buy </a></li>
-                  <li class="links"><a href="sell"> Sell </a></li>
+                  <li class="links"><a href="sell.html"> Sell </a></li>
                   <li class="links"><a href="trade"> Trade </a></li>
                 </ul>
             </section>
@@ -28,14 +28,70 @@
 
     <main>
         <section class="buying">
-            <h6> Search for cars </h6>
-            <section>
-                <container class="search-filter">
-                    <h7> Filter your search </h7>
-                        
-                </container>
+            <conatiner class="buying-container">
+                <h6> Search for cars </h6>
+                <section>
+                    <section class="select-car"> 
+                        <h7> Make of Car </h7>
+                        <select id="car-name" class="car-selection">
+                            <option value="Buick"> Buick </option>
+                            <option value="Cadillac"> Cadillac </option>
+                            <option value="Chevrolet"> Chevrolet </option>
+                            <option value="Chrysler"> Chrysler </option>
+                            <option value="Dodge"> Dodge </option>
+                            <option value="Ford"> Ford </option>
+                            <option value="GMC"> GMC </option>
+                            <option value="Honda"> Honda </option>
+                            <option value="Hyundai"> Hyundai </option>
+                            <option value="Jeep"> Jeep </option>
+                            <option value="Buick"> Telsa </option>
+                            <option value="Toyota"> Toyota </option>                    
+                        </select>
+                    </section>
+                </section>
+    
+                <section class="select-year"> 
+                    <h7> Select Year </h7>
+                    <select id="year" class="year-selection">
+                        <option value="2024"> 2024 </option>
+                        <option value="2023"> 2023 </option>
+                        <option value="2022"> 2022 </option>
+                        <option value="2021"> 2021 </option>
+                        <option value="2020"> 2020 </option>
+                        <option value="2019"> 2019 </option>
+                        <option value="2018"> 2018 </option>
+                        <option value="2017"> 2017 </option>
+                        <option value="2016"> 2016 </option>
+                        <option value="2015"> 2015 </option>
+                        <option value="2014"> 2014 </option>
+                    </select>
+                </section>
+    
+                <!-- Slider HTML from: https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+                <section class="slider-container">
+                    <h7> Select Mileage </h7>
+                    <input type="range" min="0" max="300000" value="150000" class="slider" id="myRange">
+                    <p> Mileage: <span id="value"></span></p>
+                </section>
+    
+    
+                <section class="enter-color"> 
+                    <h7> Enter Color </h7>
+                    <input type="text" class="color-input">
+                </section>
+    
+                <button type="button" class="filter-btn"> Search </button>
             </section>
-        </section>
+            </conatiner>
     </main>
 </body>
+<script>
+    const slider = document.getElementById("myRange");
+    const output = document.getElementById("value");
+    output.innerHTML = slider.value;
+    
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+</script>
 </html>
