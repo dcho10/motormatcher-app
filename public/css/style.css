@@ -47,7 +47,7 @@ ul {
     display: inline-flex;
 }
 
-.login-btn {
+.login-btn, .logout-btn {
     background-color: var(--primary);
     border: none;
     font-size: 34px;
@@ -55,7 +55,7 @@ ul {
     color: var(--secondary);
 }
 
-.login-btn:hover {
+.login-btn:hover, .logout-btn:hover {
     cursor: pointer;
     color: var(--tertiary);
 }
