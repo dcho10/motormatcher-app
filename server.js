@@ -44,7 +44,7 @@ console.log('Connected to the cars_db database.');
 });
 
 // Query database
-db.query('SELECT * FROM listings', function (err, results) {
+db.query('SELECT * FROM listing', function (err, results) {
 if (err) {
 console.error('Error querying database:', err);
 return;
