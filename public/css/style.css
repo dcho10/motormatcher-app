@@ -1,0 +1,334 @@
+:root {
+    --primary: #9381FF;
+    --secondary: #B8B8FF;
+    --tertiary: #F8F7FF;
+    
+}
+
+* {
+    font-family: "Bebas Neue", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary);
+}
+
+.home {
+    font-family: "Alfa Slab One", serif;
+    font-size: 72px;
+    color: var(--tertiary);
+}
+
+.header-btns {
+    display: flex;
+}
+
+a {
+    color: var(--secondary)
+}
+
+a:hover {
+    color: var(--tertiary);
+}
+
+.links {
+    font-size: 34px;
+    margin: 30px 10px 30px 10px;
+}
+
+ul {
+    display: inline-flex;
+}
+
+.login-btn, .logout-btn {
+    background-color: var(--primary);
+    border: none;
+    font-size: 34px;
+    padding: 10px;
+    color: var(--secondary);
+}
+
+.login-btn:hover, .logout-btn:hover {
+    cursor: pointer;
+    color: var(--tertiary);
+}
+
+.login-link {
+    color: black;
+}
+
+.login-link:hover {
+    color: var(--secondary);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.listing-btn {
+    height: 50px;
+    width: 200px;
+    font-size: 24px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 20px;
+    margin: 0 10px 0 10px;
+}
+
+body {
+    background-color: var(--tertiary);
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    padding-bottom: 40px;
+}
+
+/* From: https://codepen.io/stoic25/pen/gKLXWZ */
+.fg--search {
+    background: white;
+    position: relative;
+    width: 300px;
+}
+  
+.fg--search input {
+    width: 100%;
+    padding: 20px 60px 20px 20px;
+    display: block;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+  
+.fg--search button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 20px;
+    z-index: 2;
+}
+  
+.fg--search input:focus + button .fa-search {
+    color: red;
+}
+
+.listings, .faq {
+    padding: 2px 0 2px 0;
+}
+
+h1 {
+    font-family: "Carter One", system-ui;
+    font-size: 68px;
+    color: var(--primary);
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 40px;
+    color: var(--primary);
+    padding: 10px 0 10px 0;
+}
+
+p {
+    font-size: 24px;
+}
+
+.question {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    padding: 1px 0 1px 0;
+}
+
+.answer {
+    display: none;
+    font-size: 16px;
+}
+
+.question:hover + .answer {
+    display: block;
+    font-style: italic;
+    color: red;
+}
+
+/* Login CSS */
+.login, .signup {
+    display: grid;
+    justify-content: center;
+}
+
+.login-form, .signup-form {
+    border-style: solid;
+    border-width: 25px;
+    padding: 30px;
+    border-color: var(--primary);
+    border-radius: 20px;
+    margin: 50px;
+}
+
+h4, h6 {
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+h5, h7 {
+    font-size: 32px;
+    color: var(--primary);
+    padding-bottom: 5px;
+}
+
+.account-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset, .signup {
+    color: black;
+}
+
+.reset:hover, .signup:hover {
+    color: var(--secondary);
+}
+
+.account-management {
+    display: grid;
+}
+
+.username, .password, .account-management, .email {
+    padding: 20px;
+}
+
+.username-text, .password-text, .email-text {
+    height: 40px;
+    width: 300px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.login-button, .signup-button {
+    height: 50px;
+    background-color: var(--primary);
+    color: black;
+    font-size: 26px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.login-button:hover, .signup-button:hover, .listing-btn:hover, .upload-photo-btn:hover, .post-listing-btn:hover, .filter-btn:hover {
+    cursor: pointer;
+    color: var(--tertiary);
+}
+
+/* Selling CSS */
+
+.selling {
+    display: flex;
+    padding: 15px;
+}
+
+.listing-container, .buying-container {
+    border-style: dashed;
+    border-color: var(--secondary);
+    border-radius: 20px;
+}
+
+.make, .model, .year, .mileage, .description, .price {
+    display: grid;
+    padding: 10px;
+}
+
+.model-name, .model-year, .mileage-text, .price-text {
+    height: 30px;
+    width: 250px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.description-text {
+    height: 200px;
+    width: 500px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.listing-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload-photo-btn, .post-listing-btn, .filter-btn {
+    margin: 10px;
+    height: 50px;
+    width: 150px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 20px;
+    color: black;
+    font-size: 24px;
+}
+
+/* Buying CSS */
+
+.buying {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.buying-container {
+    border-style: dashed;
+    border-color: var(--secondary);
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.select-car, .select-year, .enter-color {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.car-selection, .year-selection, .color-input {
+    width: 100px;
+    font-size: 24px;
+}
+
+.slider {
+    padding: 10px 0 10px 0;
+}
+
+.slider-container {
+    display: grid;
+    padding: 10px 0 10px 0;
+}
+
+/* View Listing CSS */
+
+.view-listing {
+    display: grid;
+}
