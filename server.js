@@ -22,7 +22,7 @@ app.listen(3001, () => {
 });
 
 
-// Email to ID association - for buyers to email sellers
+// defining sequelize models and esbalishing connection
 
 const { Sequelize, DataTypes } = require('sequelize');
 
@@ -54,56 +54,50 @@ const Item = sequelize.define('Item', {
   }
 });
 
+// generating an ad ID
+const { v4: uuid } = require('uuid');
+
+/// import ad model
+const Advertisement = require('./models/advertisement'); 
+
+//create a new ad with a random ad ID
+const createAdvertisement = async () => {
+    try {
+      // generate a UUID for the ad ID
+        const adId = uuid(); 
+        const newAdvertisement = await Advertisement.create({ adId,});
+        console.log('Your ad has been created', newAdvertisement);
+    } catch (error) {
+        console.error('Error creating your ad:', error);
+    }
+};
+
+// call the function to create a new ad
+createAdvertisement();
+
+
+// pulling email from ad ID 
+
 app.post('/inquiry', async (req, res) => {
   const { adId, message } = req.body;
 
   try {
-      // fetch the seller's email
+      // fetch ad details (ie. the seller's email)
       const ad = await Ad.findOne({ where: { id: adId } });
       if (!ad) {
           return res.status(404).send('Ad not found.');
       }
 
       // send an email to the seller
-      console.log(`Sending inquiry email to ${ad.sellerEmail} regarding item ${adId}: ${message}`);
+      console.log(`Sending inquiry email to ${ad.sellerEmail} regarding ad ${adId}: ${message}`);
 
-      // Save the inquiry to the database if needed
+      // save the inquiry to the database 
       await Inquiry.create({ adId, message });
 
-      res.status(200).send('Inquiry sent successfully.');
+      res.status(200).send('Inquiry has been sent!');
   } catch (error) {
       console.error('Error sending inquiry:', error);
-      res.status(500).send('An error occurred while sending the inquiry.');
+      res.status(500).send('An error occurred while sending your inquiry.');
   }
 });
 
-app.listen(3001, () => {
-  console.log('Server is running on port 3001');
-});
-
-// **** Replace ID # with actual adID ****
-const inquiryData = {
-  adId: 123, 
-  message: 'I am interested in this vehicle. Can you provide more details?'
-};
-
-fetch('/inquiry', {
-  method: 'POST',
-  headers: {
-      'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(inquiryData)
-})
-.then(response => {
-  if (!response.ok) {
-      throw new Error('Network response error');
-  }
-  return response.text();
-})
-.then(data => {
-// logs response from the server
-  console.log(data);
-})
-.catch(error => {
-  console.error('There was a problem with your fetch request', error);
-});

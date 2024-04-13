@@ -1,5 +1,6 @@
+// Prevent the form from submitting normally
 document.getElementById('uploadForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the form from submitting normally
+  event.preventDefault(); 
 
   let formData = new FormData();
   formData.append('photo', document.getElementById('photoInput').files[0]);
@@ -15,7 +16,8 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
         return response.text();
     })
     .then(data => {
-        console.log(data); // Log the response from the server
+        // Log the response from the server
+        console.log(data); 
     })
     .catch(error => {
         console.error('There was a problem with your fetch operation:', error);
