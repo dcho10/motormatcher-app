@@ -13,7 +13,7 @@ const Sequelize = require("./config/connection");
 const DataTypes = require("sequelize")
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 const sess = {
     secret: "Super secret secret",
@@ -105,7 +105,7 @@ app.post("/inquiry", async (req, res) => {
 Sequelize.sync({ force: false})
 .then(() => {
     app.listen(PORT, () => {
-        console.log(`Server listening on http://localhost:${PORT}`)
+        console.log(`Server listening`)
     })
 })
 .catch(err => {
