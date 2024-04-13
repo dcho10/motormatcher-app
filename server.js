@@ -59,9 +59,9 @@ app.post('/inquiry', async (req, res) => {
 
   try {
       // fetch the seller's email
-      const ad = await ad.findOne({ where: { id: adId } });
+      const ad = await Ad.findOne({ where: { id: adId } });
       if (!ad) {
-          return res.status(404).send('Item not found.');
+          return res.status(404).send('Ad not found.');
       }
 
       // send an email to the seller
