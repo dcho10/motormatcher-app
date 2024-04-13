@@ -34,6 +34,7 @@
                     <section class="select-car"> 
                         <h7> Make of Car </h7>
                         <select id="car-name" class="car-selection">
+                            <option value="Select" class="select"> Select </option>
                             <option value="Buick"> Buick </option>
                             <option value="Cadillac"> Cadillac </option>
                             <option value="Chevrolet"> Chevrolet </option>
@@ -53,6 +54,7 @@
                 <section class="select-year"> 
                     <h7> Select Year </h7>
                     <select id="year" class="year-selection">
+                        <option value="Select" class="select"> Select </option>
                         <option value="2024"> 2024 </option>
                         <option value="2023"> 2023 </option>
                         <option value="2022"> 2022 </option>
@@ -67,24 +69,30 @@
                     </select>
                 </section>
     
+                <section class="enter-color"> 
+                    <h7> Enter Color </h7>
+                    <input type="text" class="color-input">
+                </section>
+
                 <!-- Slider HTML from: https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
                 <section class="slider-container">
                     <h7> Select Mileage </h7>
                     <input type="range" min="0" max="300000" value="150000" class="slider" id="myRange">
                     <p> Mileage: <span id="value"></span></p>
                 </section>
-    
-    
-                <section class="enter-color"> 
-                    <h7> Enter Color </h7>
-                    <input type="text" class="color-input">
+
+                <section class="slider-container">
+                    <h7> Price Range </h7>
+                    <input type="range" min="0" max="25000" value="12500" class="slider" id="price-Range">
+                    <p> Price Range: <span id="price-value"></span></p>
                 </section>
-    
+
                 <button type="button" class="filter-btn"> Search </button>
             </conatiner>
         </section>
     </main>
 </body>
+
 <script>
     const slider = document.getElementById("myRange");
     const output = document.getElementById("value");
@@ -92,6 +100,14 @@
     
     slider.oninput = function() {
         output.innerHTML = this.value;
+    }
+
+    const priceSlider = document.getElementById("price-Range");
+    const priceOutput = document.getElementById("price-value");
+    priceOutput.innerHTML = priceSlider.value;
+    
+    priceSlider.oninput = function() {
+        priceOutput.innerHTML = this.value;
     }
 </script>
 </html>

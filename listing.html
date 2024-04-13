@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Trading App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Bungee+Shade&family=Carter+One&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">
-
-    <title> Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header class="header">
@@ -22,34 +22,24 @@
                 </ul>
             </section>
     
-            <button class="login-btn" id="login" onclick="window.location.href='login.html'"> Login </button>
+            <button class="login-btn" id="login" onclick="window.location.href='login.html'">Login</button>
         </section>
     </header>
 
     <main>
-        <section class="login">
-            <form class="login-form">
-                <h4>Create Account</h4>
-                <section class="username">
-                    <h5> Create a username </h5>
-                    <input type="username" class="username-text" placeholder="Username">
-                </section>
-                
-                <section class="email">
-                    <h5> Enter your email </h5>
-                    <input type="email" class="email-text" placeholder="Email">
+        <section class="display-listing">
+            <container class="view-listing">
+                <h6> Listing </h6>
+                <h7> Make </h7>
+                <h7> Model </h7>
+                <h7> Mileage </h7>
+                <h7> Price </h7>
+                <section class="listing-description">
+                    <h7> Description </h7>
+                    <p> Description goes here</p>
                 </section>
 
-                <section class="password">
-                    <h5> Create a password </h5>
-                    <input type="password" class="password-text" placeholder="Password">
-                </section>
-             
-                <section class="account-management">
-                    <button class="login-button"> Create Account </button>
-                </section>
-            </form>
+            </container>
         </section>
     </main>
 </body>
-</html>
