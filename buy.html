@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Trading App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Bungee+Shade&family=Carter+One&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="home"> TBD </a>
+        <section class="header-btns">
+            <section >
+                <ul>
+                  <li class="links"><a href="buy.html"> Buy </a></li>
+                  <li class="links"><a href="sell.html"> Sell </a></li>
+                  <li class="links"><a href="trade"> Trade </a></li>
+                </ul>
+            </section>
+    
+            <button class="login-btn" id="login" onclick="window.location.href='login.html'">Login</button>
+        </section>
+    </header>
+
+    <main>
+        <section class="buying">
+            <conatiner class="buying-container">
+                <h6> Search for cars </h6>
+                <section>
+                    <section class="select-car"> 
+                        <h7> Make of Car </h7>
+                        <select id="car-name" class="car-selection">
+                            <option value="Select" class="select"> Select </option>
+                            <option value="Buick"> Buick </option>
+                            <option value="Cadillac"> Cadillac </option>
+                            <option value="Chevrolet"> Chevrolet </option>
+                            <option value="Chrysler"> Chrysler </option>
+                            <option value="Dodge"> Dodge </option>
+                            <option value="Ford"> Ford </option>
+                            <option value="GMC"> GMC </option>
+                            <option value="Honda"> Honda </option>
+                            <option value="Hyundai"> Hyundai </option>
+                            <option value="Jeep"> Jeep </option>
+                            <option value="Buick"> Telsa </option>
+                            <option value="Toyota"> Toyota </option>                    
+                        </select>
+                    </section>
+                </section>
+    
+                <section class="select-year"> 
+                    <h7> Select Year </h7>
+                    <select id="year" class="year-selection">
+                        <option value="Select" class="select"> Select </option>
+                        <option value="2024"> 2024 </option>
+                        <option value="2023"> 2023 </option>
+                        <option value="2022"> 2022 </option>
+                        <option value="2021"> 2021 </option>
+                        <option value="2020"> 2020 </option>
+                        <option value="2019"> 2019 </option>
+                        <option value="2018"> 2018 </option>
+                        <option value="2017"> 2017 </option>
+                        <option value="2016"> 2016 </option>
+                        <option value="2015"> 2015 </option>
+                        <option value="2014"> 2014 </option>
+                    </select>
+                </section>
+    
+                <section class="enter-color"> 
+                    <h7> Enter Color </h7>
+                    <input type="text" class="color-input">
+                </section>
+
+                <!-- Slider HTML from: https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+                <section class="slider-container">
+                    <h7> Select Mileage </h7>
+                    <input type="range" min="0" max="300000" value="150000" class="slider" id="myRange">
+                    <p> Mileage: <span id="value"></span></p>
+                </section>
+
+                <section class="slider-container">
+                    <h7> Price Range </h7>
+                    <input type="range" min="0" max="25000" value="12500" class="slider" id="price-Range">
+                    <p> Price Range: <span id="price-value"></span></p>
+                </section>
+
+                <button type="button" class="filter-btn"> Search </button>
+            </conatiner>
+        </section>
+    </main>
+</body>
+
+<script>
+    const slider = document.getElementById("myRange");
+    const output = document.getElementById("value");
+    output.innerHTML = slider.value;
+    
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+
+    const priceSlider = document.getElementById("price-Range");
+    const priceOutput = document.getElementById("price-value");
+    priceOutput.innerHTML = priceSlider.value;
+    
+    priceSlider.oninput = function() {
+        priceOutput.innerHTML = this.value;
+    }
+</script>
+</html>

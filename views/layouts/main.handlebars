@@ -14,15 +14,18 @@
     <header class="header">
         <a href="/" class="home"> TBD </a>
         <section class="header-btns">
-            <section >
+            <section>
                 <ul>
-                  <li class="links"><a href="buy.html"> Buy </a></li>
-                  <li class="links"><a href="sell.html"> Sell </a></li>
-                  <li class="links"><a href="trade"> Trade </a></li>
+                  <li class="links"><a href="/views/buy.handlebars"> Buy </a></li>
+                  <li class="links"><a href="/views/sell.handlebars"> Sell </a></li>
                 </ul>
             </section>
-    
-            <button class="login-btn" id="login" onclick="window.location.href='login.html'">Login</button>
+            {{#if logged_in}}
+            <button class="logout-btn" id="logout"> Logout </button>
+            {{else}}
+            <button class="login-btn" id="login" onclick="window.location.href='/views/login.handlebars'"> Login </button>
+            {{/if}}
+            <button ></button>
         </section>
     </header>
 
@@ -38,18 +41,24 @@
         </form>
 
         <section class="buttons">
-            <button type="button" class="listing-btn" onclick="window.location.href='sell.html'"> Create a Listing </button>
+            <button type="button" class="listing-btn" onclick="window.location.href='/views/sell.handlebars'"> Create a Listing </button>
         </section>
         
         <section class="display-postings">
             <h3> Your postings </h3>
-            <p><a href="login.html" class="login-link">Login</a> to view.</p>
+            <p><a href="/views/login.handlebars" class="login-link">Login</a> to view.</p>
             <p> (For each posting, add to postings section - figure out functionality) </p>
+            {{#if logged_in}}
+            {{#each listings as |listing|}}
+            <section class=""> 
+
+            </section>
+
         </section>
 
         <section class="listings">
             <h3> Previously viewed listings </h3>
-            <p><a href="login.html" class="login-link">Login</a> to view.</p>
+            <p><a href="/views/login.handlebars" class="login-link">Login</a> to view.</p>
             <p> (For each listing viewed, add to listings section - figure out functionality) </p>
         </section>
 
