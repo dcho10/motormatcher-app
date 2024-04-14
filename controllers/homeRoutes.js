@@ -80,11 +80,15 @@ router.get("/login", (req, res) => {
 
 // New route for the /buy page
 router.get("/buy", (req, res) => {
-    // Handle logic for the /buy page here
-    res.render("buy");
+    try {
+        // Handle logic for the /buy page here
+        res.render("buy"); // Renders the buy.handlebars template
+    } catch (err) {
+        res.status(500).json(err); // Add error handling
+    }
 });
 
-// New route for the /sell page; protected with `withAuth` middleware
+// New route for the /sell page; protected with `withAuth`
 router.get("/sell", withAuth, async (req, res) => {
     try {
         // Fetch data required for the /sell page, e.g., listings for the user
