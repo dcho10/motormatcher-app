@@ -9,26 +9,26 @@ Listing.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true,
+            autoIncrement: true
         },
         make: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         model: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         year: {
             type: DataTypes.INTEGER
         },
         mileage: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: false
         },
         price: {
             type: DataTypes.FLOAT,
-            allowNull: false,
+            allowNull: false
         },
         description: {
             type: DataTypes.STRING,
