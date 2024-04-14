@@ -254,12 +254,12 @@ h5, h7 {
     border-radius: 20px;
 }
 
-.make, .model, .year, .mileage, .description, .price {
+.listing-title, .make, .model, .year, .mileage, .description, .price {
     display: grid;
     padding: 10px;
 }
 
-.model-name, .model-year, .mileage-text, .price-text {
+.title-text, .model-name, .model-year, .mileage-text, .price-text {
     height: 30px;
     width: 250px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -331,4 +331,12 @@ h5, h7 {
 
 .view-listing {
     display: grid;
+    padding: 15px;
+}
+
+.display-listing {
+    border-style: dashed;
+    border-color: var(--secondary);
+    margin: 15px;
+    border-radius: 20px;
 }

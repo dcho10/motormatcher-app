@@ -11,6 +11,9 @@ Listing.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    title: {
+      type: DataTypes.STRING
+    },
     make: {
       type: DataTypes.STRING,
       allowNull: false,

@@ -51,7 +51,11 @@
             {{#if logged_in}}
             {{#each listings as |listing|}}
             <section class=""> 
-
+        <section class="display-listing">
+            <section class="view-listing">
+                <h7><a href="/views/listing.handlebars/{{listing.name}}"></a></h7>
+            </section>
+        </section>
             </section>
 
         </section>
