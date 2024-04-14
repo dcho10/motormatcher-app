@@ -8,14 +8,14 @@ router.get("/", async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: ["name"],
+                    attributes: ["username"],
                 },
             ],
         });
 
         const listings = listingData.map((listing) => listing.get({ plain: true }));
 
-        res.render("homepage", {
+        res.render("./layouts/main", {
             listings,
             logged_in: req.session.logged_in
         });
@@ -30,7 +30,7 @@ router.get("/listing/:id", async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: ["name"],
+                    attributes: ["username"],
                 },
             ],
         });
