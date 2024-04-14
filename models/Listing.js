@@ -1,3 +1,5 @@
+// Listing.js
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -41,11 +43,11 @@ Listing.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    user_id: {
+    user_id: { // Corrected foreign key reference here to reference the user_id column
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id',
+        model: 'user', // referencing the User model
+        key: 'id', // referencing the primary key of the User model
       },
     },
   },

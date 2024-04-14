@@ -7,8 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Bungee+Shade&family=Carter+One&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{!-- changed href --}}
+    <link rel="stylesheet" type="text/css" href="/css/style.css"> 
 </head>
 <body>
     <header class="header">
@@ -16,14 +17,14 @@
         <section class="header-btns">
             <section>
                 <ul>
-                  <li class="links"><a href="/views/buy.handlebars"> Buy </a></li>
-                  <li class="links"><a href="/views/sell.handlebars"> Sell </a></li>
+                  <li class="links"><a href="/buy"> Buy </a></li>
+                  <li class="links"><a href="/sell"> Sell </a></li>
                 </ul>
             </section>
             {{#if logged_in}}
             <button class="logout-btn" id="logout"> Logout </button>
             {{else}}
-            <button class="login-btn" id="login" onclick="window.location.href='/views/login.handlebars'"> Login </button>
+            <button class="login-btn" id="login" onclick="window.location.href='/login'"> Login </button>
             {{/if}}
             <button ></button>
         </section>
@@ -41,28 +42,24 @@
         </form>
 
         <section class="buttons">
-            <button type="button" class="listing-btn" onclick="window.location.href='/views/sell.handlebars'"> Create a Listing </button>
+            <button type="button" class="listing-btn" onclick="window.location.href='/sell'"> Create a Listing </button>
         </section>
         
         <section class="display-postings">
             <h3> Your postings </h3>
-            <p><a href="/views/login.handlebars" class="login-link">Login</a> to view.</p>
+            <p><a href="/login" class="login-link">Login</a> to view.</p>
             <p> (For each posting, add to postings section - figure out functionality) </p>
-            {{#if logged_in}}
+            {{!-- {{#if logged_in}}
             {{#each listings as |listing|}}
             <section class=""> 
-        <section class="display-listing">
-            <section class="view-listing">
-                <h7><a href="/views/listing.handlebars/{{listing.name}}"></a></h7>
-            </section>
-        </section>
-            </section>
+
+            </section> --}}
 
         </section>
 
         <section class="listings">
             <h3> Previously viewed listings </h3>
-            <p><a href="/views/login.handlebars" class="login-link">Login</a> to view.</p>
+            <p><a href="/login" class="login-link">Login</a> to view.</p>
             <p> (For each listing viewed, add to listings section - figure out functionality) </p>
         </section>
 

@@ -3,12 +3,13 @@ const Listing = require('./Listing');
 const Seller = require('./Seller'); // Added Seller
 
 User.hasMany(Listing, {
-  foreignKey: 'id',
+  foreignKey: 'user_id', // Specified the foreign key
   onDelete: 'CASCADE'
 });
 
 Listing.belongsTo(User, {
-  foreignKey: 'id'
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
 });
 
 module.exports = { User, Listing, Seller }; // Included Seller in exports
