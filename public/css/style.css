@@ -236,7 +236,7 @@ h5, h7 {
     margin-top: 20px;
 }
 
-.login-button:hover, .signup-button:hover, .listing-btn:hover, .upload-photo-btn:hover, .post-listing-btn:hover, .filter-btn:hover {
+.login-button:hover, .signup-button:hover, .listing-btn:hover, .upload-photo-btn:hover, .post-listing-btn:hover, .filter-btn:hover, .edit-btn:hover, .delete-btn:hover {
     cursor: pointer;
     color: var(--tertiary);
 }
@@ -254,12 +254,12 @@ h5, h7 {
     border-radius: 20px;
 }
 
-.listing-title, .make, .model, .year, .mileage, .description, .price {
+.make, .model, .year, .mileage, .description, .price {
     display: grid;
     padding: 10px;
 }
 
-.title-text, .model-name, .model-year, .mileage-text, .price-text {
+.model-name, .model-year, .mileage-text, .price-text {
     height: 30px;
     width: 250px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -280,7 +280,7 @@ h5, h7 {
     justify-content: space-between;
 }
 
-.upload-photo-btn, .post-listing-btn, .filter-btn {
+.upload-photo-btn, .post-listing-btn, .filter-btn, .edit-btn, .delete-btn {
     margin: 10px;
     height: 50px;
     width: 150px;
@@ -329,14 +329,20 @@ h5, h7 {
 
 /* View Listing CSS */
 
-.view-listing {
-    display: grid;
+.display-listing {
+    display: flex;
     padding: 15px;
 }
 
-.display-listing {
+.view-listing {
+    display: grid;
     border-style: dashed;
     border-color: var(--secondary);
-    margin: 15px;
     border-radius: 20px;
+    padding: 10px;
+}
+
+.post-btn {
+    display: flex;
+    justify-content: space-between;
 }

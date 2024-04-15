@@ -1,10 +1,8 @@
-const router = require('express').Router();
-const userRoutes = require('./userRoutes');
-const listingRoutes = require('./listingRoutes');
-const sellerRoutes = require('./sellerRoutes'); // Imported sellerRoutes.js
+const router = require("express").Router();
+const userRoutes = require("./userRoutes");
+const listingRoutes = require("./listingRoutes");
 
-router.use('/users', userRoutes);
-router.use('/listing', listingRoutes);
-router.use('/sellers', sellerRoutes); // Included sellerRoutes
+router.use("/users", userRoutes);
+router.use("/listings", listingRoutes);
 
 module.exports = router;

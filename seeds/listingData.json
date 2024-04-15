@@ -2,25 +2,25 @@
     {
         "make": "Honda",
         "model": "Civic",
-        "color": "Grey",
-        "mileage": "20000",
-        "price": 2000,
-        "description": "It runs, doesn't come with tires, goes from point A to point B, that's it. Rusted bottom."
+        "year": "2020",
+        "mileage": 25000,
+        "price": 12000,
+        "description": "Great condition!"
     },
     {
         "make": "Toyota",
-        "model": "RAV-4",
-        "color": "Red",
-        "mileage": "50000",
-        "price": 20000,
-        "description": "Good condition, regular upkeep, pets have been in it."
+        "model": "RAV4",
+        "year": "1996",
+        "mileage": 50000,
+        "price": 100,
+        "description": "Poor condition!"
     },
     {
         "make": "Tesla",
         "model": "Model 3",
-        "color": "Blue",
-        "mileage": "40000",
-        "price": 150000,
-        "description": "It's an eco-friendly car."
+        "year": "2022",
+        "mileage": 10000,
+        "price": 16000,
+        "description": "Good condition!"
     }
 ]
