@@ -1,6 +1,7 @@
+// Import required modules
+const path = require("path");
 const router = require("express").Router();
-const { Listing, User } = require("../models");
-const sequelize = require('../config/connection');
+const { Listing, User, Seller } = require("../models");
 const withAuth = require("../utils/auth");
 
 // Existing route for the homepage
@@ -12,12 +13,15 @@ router.get("/", async (req, res) => {
                     model: User,
                     attributes: ["username"],
                 },
+                {
+                    model: Seller // Include the Seller model
+                }
             ],
         });
 
         const listings = listingData.map((listing) => listing.get({ plain: true }));
 
-        res.render("./layouts/main", {
+        res.render(path.join(__dirname, "../views/layouts/main"), {
             listings,
             logged_in: req.session.logged_in
         });
@@ -35,6 +39,9 @@ router.get("/listing/:id", async (req, res) => {
                     model: User,
                     attributes: ["username"],
                 },
+                {
+                    model: Seller // Include the Seller model
+                }
             ],
         });
 
@@ -81,14 +88,13 @@ router.get("/login", (req, res) => {
 // New route for the /buy page
 router.get("/buy", (req, res) => {
     try {
-        // Handle logic for the /buy page here
         res.render("buy"); // Renders the buy.handlebars template
     } catch (err) {
-        res.status(500).json(err); // Add error handling
+        res.status(500).json(err); // Added error handling
     }
 });
 
-// New route for the /sell page; protected with `withAuth`
+// New route for the /sell page
 router.get("/sell", withAuth, async (req, res) => {
     try {
         // Fetch data required for the /sell page, e.g., listings for the user
@@ -96,7 +102,12 @@ router.get("/sell", withAuth, async (req, res) => {
         const userListingData = await Listing.findAll({
             where: {
                 user_id: user
-            }
+            },
+            include: [
+                {
+                    model: Seller // Include the Seller model
+                }
+            ]
         });
 
         const userListings = userListingData.map((listing) => listing.get({ plain: true }));
@@ -110,4 +121,5 @@ router.get("/sell", withAuth, async (req, res) => {
     }
 });
 
+// Export the router
 module.exports = router;
