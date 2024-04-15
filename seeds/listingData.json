@@ -1,0 +1,26 @@
+[
+    {
+        "make": "Honda",
+        "model": "Civic",
+        "year": "2020",
+        "mileage": 25000,
+        "price": 12000,
+        "description": "Great condition!"
+    },
+    {
+        "make": "Toyota",
+        "model": "RAV4",
+        "year": "1996",
+        "mileage": 50000,
+        "price": 100,
+        "description": "Poor condition!"
+    },
+    {
+        "make": "Tesla",
+        "model": "Model 3",
+        "year": "2022",
+        "mileage": 10000,
+        "price": 16000,
+        "description": "Good condition!"
+    }
+]
