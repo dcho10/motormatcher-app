@@ -236,7 +236,7 @@ h5, h7 {
     margin-top: 20px;
 }
 
-.login-button:hover, .signup-button:hover, .listing-btn:hover, .upload-photo-btn:hover, .post-listing-btn:hover, .filter-btn:hover {
+.login-button:hover, .signup-button:hover, .listing-btn:hover, .upload-photo-btn:hover, .post-listing-btn:hover, .filter-btn:hover, .edit-btn:hover, .delete-btn:hover {
     cursor: pointer;
     color: var(--tertiary);
 }
@@ -280,7 +280,7 @@ h5, h7 {
     justify-content: space-between;
 }
 
-.upload-photo-btn, .post-listing-btn, .filter-btn {
+.upload-photo-btn, .post-listing-btn, .filter-btn, .edit-btn, .delete-btn {
     margin: 10px;
     height: 50px;
     width: 150px;
@@ -329,6 +329,20 @@ h5, h7 {
 
 /* View Listing CSS */
 
+.display-listing {
+    display: flex;
+    padding: 15px;
+}
+
 .view-listing {
     display: grid;
+    border-style: dashed;
+    border-color: var(--secondary);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.post-btn {
+    display: flex;
+    justify-content: space-between;
 }
