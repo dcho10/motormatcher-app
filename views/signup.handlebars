@@ -1,25 +1,23 @@
-    <section class="signup">
-        <form class="signup-form">
-            <h4>Create Account</h4>
-            <section class="username">
-                <label for="username-signup"> Create a username </label>
-                <input type="username" class="username-text" placeholder="Username">
-            </section>
-            
-            <section class="email">
-                <label for="email-signup"> Enter your email </label>
-                <input type="email" class="email-text" placeholder="Email">
-            </section>
+<section class="signup">
+    <form class="signup-form" action="/api/users" method="POST"> <!-- Specified the form action and method -->
+        <h4>Create Account</h4>
+        <section class="username">
+            <label for="username-signup"> Create a username </label>
+            <input type="text" class="username-text" name="username" placeholder="Username"> <!-- Added the name attribute -->
+        </section>
+        
+        <section class="email">
+            <label for="email-signup"> Enter your email </label>
+            <input type="email" class="email-text" name="email" placeholder="Email"> <!-- Added the name attribute -->
+        </section>
 
-            <section class="password">
-                <label for="password-signup"> Create a password </label>
-                <input type="password" class="password-text" placeholder="Password">
-            </section>
-            
-            <section class="account-management">
-                <button class="signup-button" type="submit"> Create Account </button>
-            </section>
-        </form>
-    </section>
-
-<script src="../public/js/signup.js"></script>
+        <section class="password">
+            <label for="password-signup"> Create a password </label>
+            <input type="password" class="password-text" name="password" placeholder="Password"> <!-- Added the name attribute -->
+        </section>
+        
+        <section class="account-management">
+            <button class="signup-button" type="submit"> Create Account </button>
+        </section>
+    </form>
+</section>
