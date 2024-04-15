@@ -87,7 +87,6 @@ router.get("/login", (req, res) => {
 
 // New route for the /buy page
 router.get("/buy", (req, res) => {
-<<<<<<< HEAD
     try {
         res.render("buy"); // Renders the buy.handlebars template
     } catch (err) {
@@ -96,13 +95,6 @@ router.get("/buy", (req, res) => {
 });
 
 // New route for the /sell page
-=======
-    // Handle logic for the /buy page here
-    res.render("buy");
-});
-
-// New route for the /sell page; protected with `withAuth` middleware
->>>>>>> parent of 9bda7ce (added catch error function for buy and sell in an attempt to fix issues)
 router.get("/sell", withAuth, async (req, res) => {
     try {
         // Fetch data required for the /sell page, e.g., listings for the user
