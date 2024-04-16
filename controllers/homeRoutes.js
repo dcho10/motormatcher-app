@@ -24,27 +24,22 @@ const withAuth = require("../utils/auth");
 //     }
 // });
 
-// router.get("/listing/:id", async (req, res) => {
-//     try {
-//         const listingData = await Listing.findByPk(req.params.id, {
-//             include: [
-//                 {
-//                     model: User,
-//                     attributes: ["username"],
-//                 },
-//             ],
-//         });
+router.get("/listings/:id", async (req, res) => {
+    try {
+        const listingData = await Listing.findByPk(req.params.id, {
 
-//         const listing = listingData.get({ plain: true });
+        });
 
-//         res.render("listing", {
-//             ...listing,
-//             logged_in: req.session.logged_in
-//         });
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
+        const listing = listingData.get({ plain: true });
+
+        res.render("listing", {
+            ...listing,
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 // router.get("/profile", withAuth, async (req, res) => {
 //     try {
