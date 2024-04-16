@@ -16,7 +16,7 @@ const listingForm = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace("/");
+            document.location.replace("/listing");
         } else {
             alert(response.statusText);
         }
