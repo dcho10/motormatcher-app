@@ -88,6 +88,10 @@ router.get("/signup", (req, res) => {
     res.render ("signup")
 })
 
+router.get("/listing", (req, res) => {
+    res.render ("listing")
+})
+
 router.get("/login", (req, res) => {
     if (req.session.logged_in) {
         res.redirect("/");
