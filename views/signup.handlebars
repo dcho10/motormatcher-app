@@ -1,23 +1,22 @@
 <section class="signup">
-    <form class="signup-form" action="/api/users" method="POST"> <!-- Specified the form action and method -->
+    <form class="signup-form"> <!-- Specified the form action and method -->
         <h4>Create Account</h4>
         <section class="username">
             <label for="username-signup"> Create a username </label>
-            <input type="text" class="username-text" name="username" placeholder="Username"> <!-- Added the name attribute -->
+            <input type="text" class="username-text" id="username-signup" name="username" placeholder="Username"> <!-- Added the name attribute -->
         </section>
-        
         <section class="email">
             <label for="email-signup"> Enter your email </label>
-            <input type="email" class="email-text" name="email" placeholder="Email"> <!-- Added the name attribute -->
+            <input type="email" class="email-text" id="email-signup" name="email" placeholder="Email"> <!-- Added the name attribute -->
         </section>
-
         <section class="password">
             <label for="password-signup"> Create a password </label>
-            <input type="password" class="password-text" name="password" placeholder="Password"> <!-- Added the name attribute -->
+            <input type="password" class="password-text" id="password" name="password" placeholder="Password"> <!-- Added the name attribute -->
         </section>
-        
         <section class="account-management">
             <button class="signup-button" type="submit"> Create Account </button>
         </section>
     </form>
 </section>
+
+<script src="./js/signup.js"></script>

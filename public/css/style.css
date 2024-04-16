@@ -73,7 +73,7 @@ ul {
     justify-content: center;
 }
 
-.listing-btn {
+.listing-btn, .view-listing-btn {
     height: 50px;
     width: 200px;
     font-size: 24px;
@@ -236,7 +236,7 @@ h5, h7 {
     margin-top: 20px;
 }
 
-.login-button:hover, .signup-button:hover, .listing-btn:hover, .upload-photo-btn:hover, .post-listing-btn:hover, .filter-btn:hover, .edit-btn:hover, .delete-btn:hover {
+.login-button:hover, .signup-button:hover, .listing-btn:hover, .view-listing-btn:hover, .upload-photo-btn:hover, .post-listing-btn:hover, .filter-btn:hover, .edit-btn:hover, .delete-btn:hover {
     cursor: pointer;
     color: var(--tertiary);
 }
@@ -248,7 +248,7 @@ h5, h7 {
     padding: 15px;
 }
 
-.listing-container, .buying-container {
+.listing-form, .buying-container {
     border-style: dashed;
     border-color: var(--secondary);
     border-radius: 20px;
