@@ -64,17 +64,6 @@ const withAuth = require("../utils/auth");
 //     }
 // });
 
-// router.get("/login", (req, res) => {
-//     if (req.session.logged_in) {
-//         res.redirect("/profile");
-//         return;
-//     }
-
-//     res.render("login");
-// });
-
-// module.exports = router;
-
 router.get("/", (req, res) => {
     res.render("homepage");
 })
@@ -99,8 +88,13 @@ router.get("/signup", (req, res) => {
     res.render ("signup")
 })
 
-// router.get("/login", (req, res) => {
-//     res.render("login", { layout: "main" });
-// })
+router.get("/login", (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect("/");
+        return;
+    }
+
+    res.render("login");
+});
 
 module.exports = router;

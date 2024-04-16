@@ -1,0 +1,28 @@
+const listingForm = async (event) => {
+    event.preventDefault();
+
+    const make = document.querySelector("#make").value.trim();
+    const model = document.querySelector("#model").value.trim();
+    const year = document.querySelector("#year").value.trim();
+    const mileage = document.querySelector("#mileage").value.trim();
+    const price = document.querySelector("#price").value.trim();
+    const description = document.querySelector("#desription").value.trim();
+
+    if (make && model && year && mileage && price && description) {
+        const response = await fetch("/api/users/listings", {
+            method: "POST",
+            body: JSON.stringify({ make, model, year, mileage, price, description }),
+            headers: { "Content-Type" : "application/json"},
+        });
+
+        if (response.ok) {
+            document.location.replace("/");
+        } else {
+            alert(response.statusText);
+        }
+    }
+}
+
+document
+    .querySelector(".listing-container")
+    .addEventListener("submit", listingForm);

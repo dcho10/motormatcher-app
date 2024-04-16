@@ -17,10 +17,10 @@ Listing.init(
         },
         model: {
             type: DataTypes.STRING,
-            allowNull: false
         },
         year: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            allowNull: false
         },
         mileage: {
             type: DataTypes.INTEGER,
