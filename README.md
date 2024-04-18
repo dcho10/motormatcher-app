@@ -26,4 +26,16 @@ This app allows users to avoid the chaos of other options (like Kijiji) and focu
 - Optional page - "trade" where you can list a vehicle you would like to swap with someone else
 
 
+![localhost_3001_(iPad Pro)](https://github.com/dcho10/group-one-car-trading-app/assets/110244046/e45316f1-2f58-4c46-8787-3eb4b125e3d8)
+
+
+![localhost_3001_login(iPad Pro)4](https://github.com/dcho10/group-one-car-trading-app/assets/110244046/e9ae4851-4821-4c1d-a1be-a0348dffa3c1)
+
+
+![localhost_3001_buy(iPad Pro)2](https://github.com/dcho10/group-one-car-trading-app/assets/110244046/f6aae2eb-94b3-4985-84c6-9bba52a56604)
+
+
+![localhost_3001_sell(iPad Pro)3](https://github.com/dcho10/group-one-car-trading-app/assets/110244046/cd132023-b063-4c7d-981f-c2937383817f)
+
+
 
