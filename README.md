@@ -1,3 +1,5 @@
+Link to app: https://motormatcher-app-42ee2ad0bce2.herokuapp.com/
+
 # PROJECT 2 - MOTOR MATCHER 
 
 As a group we created "Motor Matcher", an app that allows you to buy and sell vehicles. The arrives at our homepage with the option to login to view the listings or creating one of their own. Once logged in, they can search the website via filters on the buy page or generically on the homepage. If they are looking to sell a vehicle, they can select "create a listing" from the homepage or navigate to the "sell" page in the header and complete the form for the posting.
